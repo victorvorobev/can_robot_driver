@@ -1,0 +1,19 @@
+<!-- файл, который запускает необходимые для работы узлы -->
+<launch>
+	<!-- узел, который шлет онлайн метки в топик onliner -->
+	<node name="onliner" pkg="can_robot_driver" type="onliner">
+	<!-- тут можно задать параметры узла -->
+	</node>
+
+	<!-- узел, который слушает джойстик -->
+	<node name="joy" pkg="joy" type="joy_node">
+	<!-- тут указываем что за джойстик -->
+	<param name="dev" type="string" value="/dev/input/js0"/>
+	</node>
+
+	<node name="joystic_controll" pkg="can_robot_driver" type="joystic_controll">
+	<remap from="/cmd_vel" to="/robot1/cmd_vel"/>
+	<remap from="/prong_vel" to="/robot1/prong_vel"/>
+	</node>
+	
+</launch>

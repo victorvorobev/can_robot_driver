@@ -1,0 +1,7 @@
+<launch>
+	<node name="laser_scan_matcher" pkg="laser_scan_matcher" type="laser_scan_matcher_node"/>
+	<node name="gmapping" pkg="gmapping" type="slam_gmapping">
+		<param name="scan" type="string" value="scan"/>
+		<param name="odom_frame" type="string" value="base_link"/>
+	</node>
+</launch>
