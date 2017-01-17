@@ -5,6 +5,17 @@
 
 #Начало работы
 Скопируйте проект в catkin workspace, соберите, используйте launch файлы для запуска.
-<cd %path_to_catkin_ws%/src>
-<git clone https://github.com/victorvorobev/can_robot_driver.git>
->
+> cd %path_to_catkin_ws%/src
+
+> git clone https://github.com/victorvorobev/can_robot_driver.git
+
+> cd ..
+
+> catkin_make
+
+#Описание работы
+Узел onliner публикует в топик /onliner сообщение формата std_msgs/String раз в секунду.
+Узел joystic_control подписывается на топик /joy и публикует в топик /%имяузла%/cmd_vel сообщения формата geometry_msgs/Twist.
+В сообщении переменная linear.x содержит скорость движения робота по прямой (в процентах),
+angular.z - скорость поворота робота (также в процентах, положительное направление - против часовой стрелки).
+
