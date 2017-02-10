@@ -1,6 +1,6 @@
 #include <ros/ros.h>
 #include <sensor_msgs/Joy.h>
-#include <can_robot_driver/CanDriver.h>
+//#include <can_robot_driver/CanDriver.h>
 #include <geometry_msgs/Twist.h>
 
 class RoboJoy	//класс, описывающий взаимодействие джойстика с роботом
