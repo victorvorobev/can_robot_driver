@@ -4,7 +4,7 @@
 генерирует команды управления для робота.
 
 ### Начало работы
-Скопируйте проект в catkin workspace, соберите, используйте launch файлы для запуска.
+Скопируйте проект в `catkin_workspace`, соберите, используйте launch файлы для запуска.
 > cd %path_to_catkin_ws%/src  
 > git clone https://github.com/victorvorobev/can_robot_driver.git  
 > cd ..  
